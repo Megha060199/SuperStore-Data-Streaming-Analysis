@@ -18,8 +18,7 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
 
 ## Running analyses
 -  Run the all analyses:
-  ```
-  bash
+  ```bash
   python3 queries_run.py
   ```
 - Key analytical functions (in `queries.py`):
