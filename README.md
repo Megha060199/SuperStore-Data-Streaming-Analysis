@@ -34,7 +34,8 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
 
 ## Unit Tests
 - Run the unit suite (uses in-memory CSV via `StringIO` to avoid I/O):
-  ```python3 -m unittest
+  ```bash
+  python3 -m unittest
   ```
 - Coverage:
   ```bash
