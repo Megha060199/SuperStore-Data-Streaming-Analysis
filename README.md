@@ -17,8 +17,10 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
 - Default dataset: `data/orders.csv` (Superstore-like). All queries default to this path unless you pass a custom one.
 
 ## Running analyses
--  Run the full console report:
-  ```python3 queries_run.py
+-  Run the all analyses:
+  ```
+  bash
+  python3 queries_run.py
   ```
 - Key analytical functions (in `queries.py`):
   1) `sales_by_year_region_category(path)` – total sales per (Year, Market, Category).
