@@ -52,6 +52,10 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
 - `queries_run.py` – CLI-style output aggregating multiple reports.
 - `test_queries_unittest.py` – `unittest` coverage for helpers, parsing, and queries (in-memory data).
 
+
+
 ## Notes
+- Output is added in Analyses-Results.pdf. 
+- Unit test coverage is added in Unit Test Coverage.png
 - Stream processing means large files are handled lazily; use `StringIO` in tests or pass file-like objects to `stream_orders`.
 - Stddev defaults to sample (n-1); set `sample=False` if you need population metrics.
