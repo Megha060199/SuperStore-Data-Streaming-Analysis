@@ -6,9 +6,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Iterator, Optional, TextIO
 
-
+#this would normally be configured elsewhere
 CSV_PATH = "data/orders.csv"
 
+#this file defines the Order data model and a function to stream orders from a CSV file
 @dataclass(frozen=True)
 class Order:
     """

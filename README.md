@@ -5,8 +5,7 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
 ## Setup
 - Require Python 3.10+ (tested with 3.13).
 - Optional but recommended: create a virtualenv.
-  ```bash
-  python3 -m venv .venv
+  ```python3 -m venv .venv
   source .venv/bin/activate
   ```
 - Install deps (only coverage is non-stdlib):
