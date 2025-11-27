@@ -23,12 +23,45 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
   ```
 - Key analytical functions (in `queries.py`):
   1) `sales_by_year_region_category(path)` – total sales per (Year, Market, Category).
+
+        
+          - Identify high-performing regions and categories to focus marketing and supply-chain resources
+          -  Detect underperforming markets requiring pricing changes, better distribution, or promotions.
+
+
   2) `yoy_category_sales_trends(path)` – Year by Year change per (Market, Category) in percentage.
+             
+             -  Detect growth or decline in specific markets or product categories.
+             -   Support goal tracking, because YoY is a key KPI in performance dashboards.
+
   3) `profit_margin_by_category_subcategory(path)` – profit/sales per (Category, Sub-Category).
+              -  Discover high-margin vs. low-margin product segments.
+              -  Inform inventory and catalog decisions: remove low-margin items that occupy storage but don’t drive profit.
+              
   4) `top_categories_by_margin(path, n=5)` – top N category/sub-category by margin (min-heap).
-  5) `total_discounted_profit(path)` / `discounted_profit_share(path)` – profit from discounted orders and share of total profit.
+
+              - Highlight the most profitable categories for targeted advertising and homepage placemen
+              - Support profit maximization by optimizing product mix.
+
+  5) `total_discounted_profit(path)` / `discounted_profit_share(path)` – profit from discounted orders and total share of total profit.
+
+
+             -   Evaluate whether discount strategies are profitable or harming margins.
+             -   Detect margin leakage from overly aggressive discounting.
+
+
   6) `average_fulfillment_days(path)` – mean days between Order.Date and Ship.Date.`
+
+
+            - Measure operational efficiency of supply chain and warehouse processes.
+            - Evaluate carrier performance and SLA compliance.
+            - Predict customer satisfaction (shipping delays → low ratings & high returns).
+
+
   7) ` profit volatility(profit std) and min, max, count per (Market, Category).`
+  
+          - Inform product managers which categories need stabilization strategies (pricing, inventory).
+          - Help supply chain plan safety stock levels for unstable categories.
 
 - Console formatters live in `queries_run.py` (tables only; no logic).
 
