@@ -15,6 +15,8 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
 
 ## Data
 - Data is present in  `data/orders.csv` taken from `https://www.kaggle.com/datasets/fatihilhan/global-superstore-dataset`. All queries default to this path unless you pass a custom one.
+- Additional dataset notes present in `DATASET_NODES.md`
+
 
 ## Running analyses
 -  Run the all analyses:
@@ -29,7 +31,7 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
           -  Detect underperforming markets requiring pricing changes, better distribution, or promotions.
 
 
-  2) `yoy_category_sales_trends(path)` – Year by Year change per (Market, Category) in percentage.
+  2) `yoy_category_sales_trends(path)` – Year over Year change per (Market, Category) in percentage.
              
              -  Detect growth or decline in specific markets or product categories.
              -   Support goal tracking, because YoY is a key KPI in performance dashboards.
