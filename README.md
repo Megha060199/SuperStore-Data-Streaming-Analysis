@@ -14,7 +14,7 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
   ```
 
 ## Data
-- Default dataset: `data/orders.csv` (Superstore-like). All queries default to this path unless you pass a custom one.
+- Data is present in  `data/orders.csv` taken from `https://www.kaggle.com/datasets/fatihilhan/global-superstore-dataset`. All queries default to this path unless you pass a custom one.
 
 ## Running analyses
 -  Run the all analyses:
@@ -59,7 +59,7 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
 
 
   7) ` profit volatility(profit std) and min, max, count per (Market, Category).`
-  
+
           - Inform product managers which categories need stabilization strategies (pricing, inventory).
           - Help supply chain plan safety stock levels for unstable categories.
 
