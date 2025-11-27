@@ -59,3 +59,14 @@ Pure-Python, stream-oriented analysis of Superstore-style order data (no pandas)
 - Unit test coverage is added in Unit Test Coverage.png
 - Stream processing means large files are handled lazily; use `StringIO` in tests or pass file-like objects to `stream_orders`.
 - Stddev defaults to sample (n-1); set `sample=False` if you need population metrics.
+
+## Additional notes to make it production grade 
+-  Input validation & error handling: Wrap Order.from_row parsing with schema checks, helpful error messages (column + value), and a strategy for bad rows (skip-with-log vs fail-fast). Validate numeric conversions and date parsing instead of silent None.
+
+-  Single-pass aggregations: Current queries reread the CSV multiple times; refactor to either share a cached stream (noting iterator exhaustion) or build combined aggregations in one pass per execution. For large files this is a meaningful perf win.
+
+- Numerical semantics: Decide on sample stddev behavior for single observations; either return None/nan or document the current 0. Align with business definitions for YOY edge cases
+
+- Testing: Add integration tests over a real sample file, and tests for failure paths (bad date, missing column, zero sales) to ensure validation and logging work. Include property-based or fuzz tests for aggregations if feasible.
+
+- Testing: Add integration tests over a real sample file, and tests for failure paths (bad date, missing column, zero sales) to ensure validation and logging work. Include property-based or fuzz tests for aggregations if feasible.
